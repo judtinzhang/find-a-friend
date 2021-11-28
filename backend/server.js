@@ -7,7 +7,10 @@ const { errorHandler } = require('./middlewares/errorHandler')
 const AccountRouter = require('./routes/account')
 const RequestRouter = require('./routes/api')
 
+const cors = require('cors')
+
 const app = express()
+
 
 // brew services start mongodb/brew/mongodb-community
 const MONGO_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/find-a-friend'
@@ -24,6 +27,8 @@ app.use(session({
   keys: ['key1', 'key2'],
   maxAge: 360000,
 }))
+
+app.use(cors())
 
 app.get('/', (req, res) => {
   res.send('Welcome to Find-A-Friend\'s Backend!')
