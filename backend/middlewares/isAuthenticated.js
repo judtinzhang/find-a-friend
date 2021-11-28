@@ -1,5 +1,5 @@
 const isAuthenticated = (req, res, next) => {
-  if (req.session.username && req.session.password) {
+  if (req.session.username !== undefined && req.session.username && req.session.password) {
     next()
   } else {
     next(new Error('Not logged in.'))

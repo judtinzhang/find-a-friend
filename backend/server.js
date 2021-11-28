@@ -34,8 +34,8 @@ app.get('/', (req, res) => {
   res.send('Welcome to Find-A-Friend\'s Backend!')
 })
 
-app.use('/account', AccountRouter)
 app.use('/api', RequestRouter)
+app.use('/account', AccountRouter)
 
 app.use(errorHandler)
 

@@ -27,6 +27,12 @@ const inputStyle = {
   marginBottom: "3px"
 }
 
+const buttonStyle = {
+  color: "#4B63D8",
+  margin: "3px",
+  fontSize: "16px"
+}
+
 const Signup = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
@@ -55,7 +61,7 @@ const Signup = () => {
         <h3>Password:</h3>
         <input style={inputStyle} onChange={e => setPassword(e.target.value)} />
         <br />
-        <button type="submit" onClick={createUser}>Submit</button>
+        <button style={buttonStyle} type="submit" onClick={createUser}>Submit</button>
         <br />
         <br />
         {'Already have an account? '}

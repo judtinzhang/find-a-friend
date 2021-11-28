@@ -27,6 +27,12 @@ const inputStyle = {
   marginBottom: "3px"
 }
 
+const buttonStyle = {
+  color: "#4B63D8",
+  margin: "3px",
+  fontSize: "16px"
+}
+
 const Login = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
@@ -36,7 +42,7 @@ const Login = () => {
       const { data } = await axios.post('http://localhost:8000/account/login', { username, password })
       if (data === `User ${username} has been logged in!`) {
         sessionStorage.setItem('username', username)
-        Router.push('/')
+        Router.push('home')
       } else {
         alert(`Unable to Login: ${data}`)
       }
@@ -58,7 +64,7 @@ const Login = () => {
         <h3>Password:</h3>
         <input style={inputStyle} onChange={e => setPassword(e.target.value)} />
         <br />
-        <button type="submit" onClick={loginUser}>Submit</button>
+        <button style={buttonStyle} type="submit" onClick={loginUser}>Submit</button>
         <br />
         <br />
         {'Don\'t have an account? '}
