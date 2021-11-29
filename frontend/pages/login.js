@@ -40,9 +40,7 @@ const Login = () => {
   const loginUser = async () => {
     try {
       const { data } = await axios.post('http://localhost:3000/account/login', { username, password })
-      console.log('went here')
       if (data === `User ${username} has been logged in!`) {
-        console.log('went here')
         sessionStorage.setItem('username', username)
         Router.push('home')
       } else {

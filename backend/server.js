@@ -30,14 +30,10 @@ app.prepare().then( () => {
   server.use(session({
     name: 'session',
     keys: ['key1', 'key2'],
-    maxAge: 360000,
+    maxAge: 360000000,
   }))
 
   server.use(cors())
-
-  // server.get('/', (req, res) => {
-  //   res.send('Welcome to Find-A-Friend\'s Backend!')
-  // })
 
   server.use('/api', RequestRouter)
   server.use('/account', AccountRouter)
