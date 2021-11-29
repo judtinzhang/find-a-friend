@@ -1,0 +1,37 @@
+{
+  "name": "find-a-friend",
+  "version": "1.0.0",
+  "description": "## Next.js Frontend, Express.js Backend, MongoDB database",
+  "main": "backend/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node backend/server.js",
+    "build": "next build frontend",
+    "start": "node backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/judtinzhang/find-a-friend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/judtinzhang/find-a-friend/issues"
+  },
+  "homepage": "https://github.com/judtinzhang/find-a-friend#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "babel-eslint": "^10.1.0",
+    "concurrently": "^6.4.0",
+    "cookie-session": "^1.4.0",
+    "cors": "^2.8.5",
+    "eslint": "^8.3.0",
+    "eslint-config-airbnb": "^19.0.1",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.13",
+    "next": "^12.0.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

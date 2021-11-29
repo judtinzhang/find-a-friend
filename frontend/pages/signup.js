@@ -39,7 +39,7 @@ const Signup = () => {
 
   const createUser = async () => {
     try {
-      const { data } = await axios.post('http://localhost:8000/account/signup', { username, password })
+      const { data } = await axios.post('http://localhost:3000/account/signup', { username, password })
       if (data === `User ${username} Created!`) {
         Router.push('/')
       }

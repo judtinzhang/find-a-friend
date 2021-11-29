@@ -6,14 +6,12 @@ const router = express.Router()
 const Request = require('../models/request')
 
 router.post('/create', isAuthenticated, async (req, res, next) => {
-  console.log('helloooo')
   const {
     location,
     comment,
     time,
     shareSocials,
   } = req.body
-  console.log('hello')
   try {
     await Request.create(
       {

@@ -25,7 +25,7 @@ const Home = () => {
     const logoutUser = async () => {
         try {
           const username = sessionStorage.getItem('username')
-          await axios.post('http://localhost:8000/account/logout', { username })
+          await axios.post('http://localhost:3000/account/logout', { username })
           Router.push('/')
         } catch (err) {
           alert(`Error: ${err}`)
@@ -33,17 +33,8 @@ const Home = () => {
     }
 
     const createRequest = async () => {
-        const x = {
-            "location": "yes",
-            "comment": "hi",
-            "time": "2021-11-21T14:56:59.301",
-            "shareSocials": false
-        }
-        //{location, comment, time, shareSocials}
         try {
-            const { data } = await axios.post('http://localhost:8000/account/login', { username: 'me', password: 'too' })
-            console.log('hi')
-            await axios.post('http://localhost:8000/api/create', {location: 'hi'})
+            await axios.post('http://localhost:3000/api/create', {location, comment, time, shareSocials})
         } catch (err) {
             console.log(err)
         }

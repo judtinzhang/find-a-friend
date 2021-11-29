@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-
 const background = {
     position: "absolute",
     top: 0,
