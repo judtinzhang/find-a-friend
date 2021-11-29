@@ -3,35 +3,7 @@ import axios from 'axios'
 import Router from 'next/router'
 import Link from 'next/link'
 import Image from 'next/image'
-
-const color = {
-  position: "absolute",
-  top: 0,
-  left: 0,
-  height: "100%",
-  width: "100%",
-  backgroundColor: "#9DADFD",
-}
-
-const innerDivStyle = {
-  position: "absolute",
-  color: "white",
-  fontSize: "20px",
-  top: 150,
-  left: 570,
-  textAlign: "center"
-}
-
-const inputStyle = {
-  marginTop: "2px",
-  marginBottom: "3px"
-}
-
-const buttonStyle = {
-  color: "#4B63D8",
-  margin: "3px",
-  fontSize: "16px"
-}
+import { inputStyle, buttonStyle, background, innerDivStyle } from '../styles'
 
 const Signup = () => {
   const [username, setUsername] = useState('')
@@ -49,11 +21,11 @@ const Signup = () => {
   }
 
   return (
-    <div style={color}>
+    <div style={background}>
       <div>
           <Image src="https://i.pinimg.com/originals/eb/20/5f/eb205f33a26437d9f8324249f9b1d318.jpg" alt="Friendship" layout="fill" />
       </div>
-      <div style={innerDivStyle}>
+      <div style={innerDivStyle(150, 570)}>
         <h1>Sign Up for Find A Friend!</h1>
         <h3>Username:</h3>
         <input style={inputStyle} onChange={e => setUsername(e.target.value)} />

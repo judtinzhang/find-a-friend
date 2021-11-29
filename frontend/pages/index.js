@@ -1,29 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-
-const background = {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    height: "100%",
-    width: "100%",
-    backgroundColor: "#9DADFD",
-}
-
-const innerDivStyle = {
-    position: "absolute",
-    color: "white",
-    fontSize: "20px",
-    top: 100,
-    left: 290,
-    textAlign: "center"
-  }
-
-const buttonStyle = {
-    color: "#4B63D8",
-    margin: "3px",
-    fontSize: "20px"
-}
+import { buttonStyle, background, innerDivStyle } from '../styles'
 
 const HomePage = () => {
     return (
@@ -31,7 +8,7 @@ const HomePage = () => {
             <div>
                 <Image src="https://wallpaperaccess.com/full/133885.jpg" alt="Friendship" layout="fill" />
             </div>
-            <div style={innerDivStyle}>
+            <div style={innerDivStyle(100, 290)}>
                 <h1>Welcome to Find a Friend!</h1>
                 <h3>A matching platform for students at Penn.</h3>
                 <Link href="/login">
