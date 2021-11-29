@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import { inputStyle, buttonStyle } from '../styles'
+import { inputStyle, buttonStyle, formsStyle } from '../styles'
 
 
 const CreateRequest = () => {
@@ -29,7 +29,7 @@ const CreateRequest = () => {
             )}
 
             {createMode && (
-                <div>
+                <div style={formsStyle}>
                     <h3 style={{ marginBottom: "1px"}}>Location</h3>
                     <input style={inputStyle} placeholder="Van Pelt 1st Floor" onChange={e => setLocation(e.target.value)} />
                     <h3 style={{ marginBottom: "1px"}}>Comment</h3>

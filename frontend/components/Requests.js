@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { buttonStyle } from '../styles'
 
@@ -25,24 +25,28 @@ const Requests = () => {
         }
     }
 
-    getRequests()
+    useEffect(() => {
+        getRequests()
+    }, [])
 
     return (
-        <>
+        <div style={{textAlign: "left"}}>
+            <h3>Requests</h3>
             {requests.map(request => (
-                <div key={request._id}>
-                    <p>
-                        {request.requester}
+                <div key={request._id} style={{maxWidth: "300px"}}>
+                    <p style={{margin: "1px"}}>
+                        Location: {request.location}
                         <br />
-                        {request.comment}
+                        Comment: {request.comment}
                         <br />
-                        {request.time}
+                        Time: {new Date(request.time).toString()}
                     </p>
                     <button style={buttonStyle} type="submit" onClick={() => acceptRequest(request._id)}>Accept</button> 
+                    <p></p>
                 </div>
             ))
-            } 
-        </>
+            }
+        </div>
     )
 }
 

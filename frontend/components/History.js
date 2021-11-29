@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 const History = () => {
@@ -25,37 +25,43 @@ const History = () => {
         }
     }
 
-    getHistory()
+    useEffect(() => {
+        console.log('PLEAES MAN')
+        getHistory()
+    }, [])
 
     return (
-        <>
-            <h3>history</h3>
+
+        <div style={{textAlign: "left"}}>
+            <h3>History</h3>    
+            <div style={{overflow: "auto", textAlign: "justify", width: "250px", height: "800px"}}>
             {history.map(entry => 
             (
-                <div key={entry._id}>
+                <div key={entry._id} style={{maxWidth: "300px"}}>
                     <div>
-                        {entry.requester}
+                        Requester: {entry.requester}
                         <br />
-                        {entry.acceptor}
+                        Acceptor: {entry.acceptor}
                         <br />
-                        {entry.comment}
+                        Comment: {entry.comment}
                         <br />
-                        {entry.time}
+                        Time: {new Date(entry.time).toString()}
                         <br />
-                        {entry.location}
+                        Location: {entry.location}
                         <br />
-                        {/* {entry.shareSocials && entry.requester !== window.sessionStorage.getItem('username') && getSocials(entry.requester) && (
+                        {entry.shareSocials && entry.requester !== window.sessionStorage.getItem('username') && getSocials(entry.requester) && (
                             <div>
-                                <div>{instagram}</div>
-                                <div>{snapchat}</div>
+                                <div>{entry.requester}'s Instagram: {instagram}</div>
+                                <div>{entry.requester}'s Snapchat: {snapchat}</div>
                             </div>
-                        )}     */}
+                        )}    
                     </div>
                     <br />
                 </div>
             ))
             }
-        </>
+            </div>
+        </div>
     )
 }
 

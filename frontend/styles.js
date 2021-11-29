@@ -29,9 +29,15 @@ const innerDivStyle = (top, left) => {
     }
   }
 
+const formsStyle = {
+    backgroundColor: "#e8af10", 
+    padding: 10 
+}
+
 module.exports = {
     inputStyle,
     buttonStyle,
     background,
-    innerDivStyle
+    innerDivStyle,
+    formsStyle
 }

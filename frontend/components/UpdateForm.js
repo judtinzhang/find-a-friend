@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import { inputStyle, buttonStyle } from '../styles'
+import { inputStyle, buttonStyle, formsStyle } from '../styles'
 
 const UpdateForm = () => {
     const [updateMode, setUpdateMode] = useState(false)
@@ -26,7 +26,7 @@ const UpdateForm = () => {
             )}
 
             {updateMode && (
-                <div>
+                <div style={formsStyle}>
                     <h3 style={{ marginBottom: "1px"}}>Snapchat</h3>
                     <input style={inputStyle} onChange={e => setSnapchat(e.target.value)} />
                     <h3 style={{ marginBottom: "1px"}}>Instagram</h3>

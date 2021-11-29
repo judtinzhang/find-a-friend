@@ -4,4 +4,4 @@
 
 `npm run start` to launch frontend and backend on port 3000
 
-TODOS: style, add getSocials, fix re-rendering bug with Router.push, lint
+TODOS: style, lint
