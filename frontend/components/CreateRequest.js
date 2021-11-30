@@ -8,7 +8,7 @@ const CreateRequest = () => {
   const [comment, setComment] = useState('')
   const [time, setTime] = useState(Date.now())
   const [shareSocials, setShareSocials] = useState(false)
-
+  // NOTE: test date is May 28 2021 12:30
   const createRequest = async () => {
     try {
       const { data } = await axios.post('http://localhost:3000/api/create', {
