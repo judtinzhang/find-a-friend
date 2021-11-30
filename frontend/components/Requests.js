@@ -44,7 +44,7 @@ const Requests = () => {
     <div style={requestStyle}>
       <h3 style={{ fontWeight: 'bold' }}>Requests</h3>
       <div style={scrollStyle}>
-        {requests.map(request => (
+        {Boolean(requests) && requests.map(request => (
           <div key={request._id} style={{ maxWidth: '300px' }}>
             <div style={{ margin: '1px' }}>
               <b style={{ color: '#1e140a' }}>Location:</b>

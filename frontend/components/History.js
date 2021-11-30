@@ -40,7 +40,7 @@ const History = () => {
     <div style={historyStyle}>
       <h3 style={{ fontWeight: 'bold' }}>History</h3>
       <div style={scrollStyle}>
-        {history.map(entry => (
+        {Boolean(history) && history.map(entry => (
           <div key={entry._id} style={{ maxWidth: '300px' }}>
             <div>
               <b style={{ color: '#1e140a' }}>Location:</b>

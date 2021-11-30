@@ -30,7 +30,7 @@ router.post('/create', isAuthenticated, async (req, res, next) => {
 
 router.get('/requests', isAuthenticated, async (req, res, next) => {
   try {
-    const requests = await Request.find({ accepted: false, time: { $lte: Date.now() }, requester: { $nin: [req.session.username] } })
+    const requests = await Request.find({ accepted: false, time: { $gte: Date.now() }, requester: { $nin: [req.session.username] } })
     res.send(requests)
   } catch (err) {
     next(new Error(err))

@@ -42,7 +42,7 @@ const Home = () => {
   return (
     <div style={background}>
       <Image src="https://papers.co/wallpaper/papers.co-bb60-kakao-charactor-cute-brown-illustration-art-36-3840x2400-4k-wallpaper.jpg" alt="Friendship" layout="fill" />
-      <div style={innerDivStyle(50, 800)}>
+      <div style={innerDivStyle(50, 920)}>
         <h1 style={{ margin: '2px' }}>
           Hello,
           {'  '}
