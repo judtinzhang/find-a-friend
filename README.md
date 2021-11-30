@@ -4,4 +4,4 @@
 
 `npm run start` to launch frontend and backend on port 3000
 
-TODOS: lint
+TODOS: Test functionality using Incognito Tabs and also Lint
