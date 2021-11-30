@@ -56,7 +56,7 @@ const formsStyle = {
 }
 
 const scrollStyle = {
-  overflow: 'scroll',
+  overflow: 'auto',
   textAlign: 'justify',
   maxWidth: '60vh',
   maxHeight: '80vh',
