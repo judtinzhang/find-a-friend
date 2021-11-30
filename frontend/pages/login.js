@@ -3,7 +3,12 @@ import axios from 'axios'
 import Router from 'next/router'
 import Link from 'next/link'
 import Image from 'next/image'
-import { inputStyle, buttonStyle, background, innerDivStyle } from '../styles'
+import {
+  inputStyle,
+  buttonStyle,
+  background,
+  innerDivStyle,
+} from '../styles'
 
 const Login = () => {
   const [username, setUsername] = useState('')
@@ -26,7 +31,7 @@ const Login = () => {
   return (
     <div style={background}>
       <div>
-          <Image src="https://i.pinimg.com/originals/eb/20/5f/eb205f33a26437d9f8324249f9b1d318.jpg" alt="Friendship" layout="fill" />
+        <Image src="https://i.pinimg.com/originals/eb/20/5f/eb205f33a26437d9f8324249f9b1d318.jpg" alt="Friendship" layout="fill" />
       </div>
       <div style={innerDivStyle(50, 110)}>
         <h1>Log In to Find A Friend!</h1>
@@ -41,8 +46,8 @@ const Login = () => {
         <br />
         {'Don\'t have an account? '}
         <Link href="/signup">
-            <a>Sign Up!</a>
-        </Link>        
+          Sign Up!
+        </Link>
       </div>
     </div>
   )
