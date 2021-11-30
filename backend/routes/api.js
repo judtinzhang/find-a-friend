@@ -51,7 +51,6 @@ router.get('/history', isAuthenticated, async (req, res, next) => {
   try {
     const requests = await Request.find(
       {
-        time: { $lte: Date.now() },
         accepted: true,
         $or: [{ requester: { $in: [req.session.username] } }, { acceptor: { $in: [req.session.username] } }],
       },
