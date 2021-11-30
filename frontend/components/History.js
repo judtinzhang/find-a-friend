@@ -39,26 +39,24 @@ const History = () => {
     return (
 
         <div style={historyStyle}>
-            <h3>History</h3>    
+            <h3 style={{fontWeight: "bold"}}>History</h3>    
             <div style={scrollStyle}>
             {history.map(entry => 
             (
                 <div key={entry._id} style={{maxWidth: "300px"}}>
                     <div>
-                        Requester: {entry.requester}
+                        <b style={{color: "#1e140a"}}>Location:</b> {entry.location}
                         <br />
-                        Acceptor: {entry.acceptor}
+                        <b style={{color: "#1e140a"}}>Time:</b> {new Date(entry.time).toString()}
                         <br />
-                        Comment: {entry.comment}
+                        <b style={{color: "#1e140a"}}>Comment:</b> {entry.comment}
                         <br />
-                        Time: {new Date(entry.time).toString()}
-                        <br />
-                        Location: {entry.location}
+                        <b style={{color: "#1e140a"}}>Acceptor:</b> {entry.acceptor}
                         <br />
                         {entry.shareSocials && entry.requester !== window.sessionStorage.getItem('username') && getSocials(entry.requester) && (
                             <div>
-                                <div>{entry.requester}'s Instagram: {instagram}</div>
-                                <div>{entry.requester}'s Snapchat: {snapchat}</div>
+                                <div><b style={{color: "#1e140a"}}>Instagram:</b> {instagram}</div>
+                                <div><b style={{color: "#1e140a"}}>Snapchat:</b> {snapchat}</div>
                             </div>
                         )}    
                     </div>

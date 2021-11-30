@@ -43,21 +43,20 @@ const Requests = () => {
 
     return (
         <div style={requestStyle}>
-            <h3>Requests</h3>
+            <h3 style={{fontWeight: "bold"}}>Requests</h3>
             <div style={scrollStyle}>
                 {requests.map(request => (
                     <div key={request._id} style={{maxWidth: "300px"}}>
-                        <p style={{margin: "1px"}}>
-                            Location: {request.location}
+                        <div style={{margin: "1px"}}>
+                        <b style={{color: "#1e140a"}}>Location:</b> {request.location}
                             <br />
-                            Comment: {request.comment}
+                            <b style={{color: "#1e140a"}}>Time:</b> {new Date(request.time).toString()}
                             <br />
-                            Time: {new Date(request.time).toString()}
-                        </p>
+                            <b style={{color: "#1e140a"}}>Comment:</b> {request.comment}
+                        </div>
                         <button style={buttonStyle} type="submit" onClick={() => acceptRequest(request._id)}>Accept</button> 
                         <p></p>
-                    </div>
-                    
+                    </div>     
                 ))
                 }
             </div>
