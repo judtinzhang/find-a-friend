@@ -8,7 +8,7 @@ const HomePage = () => {
             <div>
                 <Image src="https://wallpaperaccess.com/full/133885.jpg" alt="Friendship" layout="fill" />
             </div>
-            <div style={innerDivStyle(100, 290)}>
+            <div style={innerDivStyle(50, 50)}>
                 <h1>Welcome to Find a Friend!</h1>
                 <h3>A matching platform for students at Penn.</h3>
                 <Link href="/login">

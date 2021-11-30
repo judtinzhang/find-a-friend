@@ -28,7 +28,7 @@ const Login = () => {
       <div>
           <Image src="https://i.pinimg.com/originals/eb/20/5f/eb205f33a26437d9f8324249f9b1d318.jpg" alt="Friendship" layout="fill" />
       </div>
-      <div style={innerDivStyle(150, 590)}>
+      <div style={innerDivStyle(50, 110)}>
         <h1>Log In to Find A Friend!</h1>
         <h3>Username:</h3>
         <input style={inputStyle} onChange={e => setUsername(e.target.value)} />

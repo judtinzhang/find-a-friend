@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import { historyStyle, scrollStyle } from '../styles'
 
 const History = () => {
     const [history, setHistory] = useState([])
@@ -26,15 +27,20 @@ const History = () => {
     }
 
     useEffect(() => {
-        console.log('PLEAES MAN')
         getHistory()
+        const interval = setInterval(() => {
+            getHistory()
+          }, 2000)
+          return () => {
+            clearInterval(interval)
+          }
     }, [])
 
     return (
 
-        <div style={{textAlign: "left"}}>
+        <div style={historyStyle}>
             <h3>History</h3>    
-            <div style={{overflow: "auto", textAlign: "justify", width: "250px", height: "800px"}}>
+            <div style={scrollStyle}>
             {history.map(entry => 
             (
                 <div key={entry._id} style={{maxWidth: "300px"}}>

@@ -18,20 +18,48 @@ const background = {
     backgroundColor: "#9DADFD",
 }
 
-const innerDivStyle = (top, left) => {
+const innerDivStyle = (x, y) => {
     return {
-        top: top,
-        left: left,
-        position: "absolute",
+        position: "fixed",
         color: "white",
-        fontSize: "20px",
-        textAlign: "center"
+        fontSize: "17px",
+        textAlign: "center",
+        top: "50%",
+        left: "50%",
+        transform: `translate(-${x}%, -${y}%)`
     }
   }
 
+const requestStyle = {
+    position: "fixed",
+    color: "white",
+    fontSize: "17px",
+    textAlign: "left",
+    top: "2%",
+    left: "2%"
+}
+
+const historyStyle = {
+    position: "fixed",
+    color: "white",
+    fontSize: "17px",
+    textAlign: "left",
+    top: "2%",
+    right: "2%"
+}
+
 const formsStyle = {
-    backgroundColor: "#e8af10", 
-    padding: 10 
+    backgroundColor: "#B99976", 
+    color: "black",
+    padding: 10,
+    border: "3px solid #964B00" 
+}
+
+const scrollStyle = {
+    overflow: "scroll",
+    textAlign: "justify",
+    maxWidth: "60vh",
+    maxHeight: "80vh"
 }
 
 module.exports = {
@@ -39,5 +67,8 @@ module.exports = {
     buttonStyle,
     background,
     innerDivStyle,
-    formsStyle
+    formsStyle,
+    requestStyle,
+    historyStyle,
+    scrollStyle
 }

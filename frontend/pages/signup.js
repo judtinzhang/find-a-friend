@@ -25,22 +25,22 @@ const Signup = () => {
       <div>
           <Image src="https://i.pinimg.com/originals/eb/20/5f/eb205f33a26437d9f8324249f9b1d318.jpg" alt="Friendship" layout="fill" />
       </div>
-      <div style={innerDivStyle(150, 570)}>
-        <h1>Sign Up for Find A Friend!</h1>
-        <h3>Username:</h3>
-        <input style={inputStyle} onChange={e => setUsername(e.target.value)} />
-        <br />
-        <h3>Password:</h3>
-        <input style={inputStyle} onChange={e => setPassword(e.target.value)} />
-        <br />
-        <button style={buttonStyle} type="submit" onClick={createUser}>Submit</button>
-        <br />
-        <br />
-        {'Already have an account? '}
-        <Link href="/login">
-            <a>Log in!</a>
-        </Link>        
-      </div>
+      <div style={innerDivStyle(50, 110)}>
+          <h1>Sign Up for Find A Friend!</h1>
+          <h3>Username:</h3>
+          <input style={inputStyle} onChange={e => setUsername(e.target.value)} />
+          <br />
+          <h3>Password:</h3>
+          <input style={inputStyle} onChange={e => setPassword(e.target.value)} />
+          <br />
+          <button style={buttonStyle} type="submit" onClick={createUser}>Submit</button>
+          <br />
+          <br />
+          {'Already have an account? '}
+          <Link href="/login">
+              <a>Log in!</a>
+          </Link>        
+        </div>
     </div>
   )
 }

@@ -8,7 +8,6 @@ import UpdateForm from '../components/UpdateForm'
 import Requests from '../components/Requests'
 import History from '../components/History'
 
-
 const Home = () => {
     const logoutUser = async () => {
         try {
@@ -41,25 +40,19 @@ const Home = () => {
 
     return (
         <div style={background}>
-            <div>
-                <Image src="https://papers.co/wallpaper/papers.co-bb60-kakao-charactor-cute-brown-illustration-art-36-3840x2400-4k-wallpaper.jpg" alt="Friendship" layout="fill" />
+            <Image src="https://papers.co/wallpaper/papers.co-bb60-kakao-charactor-cute-brown-illustration-art-36-3840x2400-4k-wallpaper.jpg" alt="Friendship" layout="fill" />
+            <div style={innerDivStyle(50, 800)}>
+                <h1 style={{ margin: "2px" }}>Hello, {window.sessionStorage.getItem('username')}!</h1>
             </div>
-            <div style={innerDivStyle(10, 740)}>
-                <h3 style={{ margin: "2px" }}>Hello {window.sessionStorage.getItem('username')}!</h3>
-            </div>
-            <div style={innerDivStyle(40, 720)}>
+            <div style={innerDivStyle(50, 10)}>
               <button style={buttonStyle} type="submit" onClick={logoutUser}>Logout</button>
               <br />
               <CreateRequest />
               <br />
               <UpdateForm />
             </div>
-            <div style={innerDivStyle(10, 10)}>
-              <Requests />
-            </div>
-            <div style={innerDivStyle(10, 1500)}>
-              <History />
-            </div>
+            <Requests />
+            <History />
         </div>
     )
 }
